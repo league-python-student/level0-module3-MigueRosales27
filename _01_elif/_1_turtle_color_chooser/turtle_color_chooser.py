@@ -14,9 +14,26 @@ if __name__ == '__main__':
     window = turtle.Screen()
     window.bgcolor('white')
 
+
     # TODO 1) Create a new Turtle
     #      2) Make the turtle draw a shape (this will take more than one line
     #         of code)
+    bob_turtle = turtle.Turtle()
+    bob_turtle.shape("turtle")
+
+    bob_turtle.pencolor("blue")
+    for i in range(4):
+        bob_turtle.forward(100)
+        bob_turtle.left(90)
+    #you use 90 because the 90 is how many degrees to the left
+        # but for forward it is how many pixles forward(100)
+        bob_turtle.forward(100)
+
+
+
+
+
+
     #      3) Set the pen width to 10
     #      4) Ask the user what color pen they would like to draw with
     #      5) Use an if/else statement to set the pen color that the user
