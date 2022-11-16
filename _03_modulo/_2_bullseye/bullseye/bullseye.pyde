@@ -1,6 +1,6 @@
 def setup():
     # Set the size of your sketch
-    
+    size(400,400)
     
     pass
     
