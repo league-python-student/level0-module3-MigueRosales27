@@ -3,9 +3,11 @@ def setup():
      size(500, 500)
      background(160, 160, 160)
      draw_flower(350, 100)
-
+     colorMode(HSB,360,100,100);
 
 def draw():
+    
+    bpos=0
     
     # First run the program and you should see a flower.  
   
@@ -13,8 +15,19 @@ def draw():
     # Then, use a loop to make a body for the Bee! 
     # (see the image on the recipe, it's a diagonal line of circles)
     # Use modulo to make the colors alternate between yellow and black
-    
+    ##drawing of bee 
 
+    for i in range(30):
+        
+        if(i%2==0):
+            fill(0,0,0);
+        else:
+            fill(65,100,100)
+        ellipse(bpos,bpos,50,50);
+        bpos=bpos+15
+        if(i==29):
+            fill(0,0,0);
+            draw_bee_face(bpos-15,bpos-15)
 
 
     # Now put his head on using draw_bee_face(x,y)
@@ -46,7 +59,7 @@ def draw_bee_face(bee_face_x, bee_face_y):
      ellipse(bee_face_x-17, bee_face_y-50, 10, 10)
      ellipse(bee_face_x+17, bee_face_y-50, 10, 10)
      noStroke()
-     fill(255, 251, 28)
+     fill(65, 100, 100)
      ellipse(bee_face_x, bee_face_y, 60, 60) # face
      fill(255, 237, 209)
      fill(0,0,0)
